@@ -1,20 +1,7 @@
 # rename_agent
 
 
+详见[博客](https://quoilam.github.io/2025/08/19/calcagent-ReAct%E7%BC%96%E6%8E%92%E7%9A%84agent/)
 
 ### 功能
-实现一个agent,能够计算用户给出的四则运算表达式
-要求逐步调用和计算
-
-能够用户输入生成思维链(ChainOfThinking), 然后根据思维链的内容生成tool calling chunks, 然后根据将所有内容放入
-
-### 需要工具
-四个工具 分别用于计算+ - * /
-
-
-```
-上面这个自定义 StreamToolCallChecker，在极端情况下可能需要判断所有包是否包含 ToolCall，从而导致“流式判断”的效果丢失。如果希望尽可能保留“流式判断”效果，解决这一问题的建议是：
-
-> 💡 尝试添加 prompt 来约束模型在工具调用时不额外输出文本，例如：“如果需要调用tool，直接输出tool，不要输出文本”。
-> 不同模型受 prompt 影响可能不同，实际使用时需要自行调整prompt并验证效果。
-```
+实现一个react agent,能够使用工具计算用户给出的四则运算表达式
